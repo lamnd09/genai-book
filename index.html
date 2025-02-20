@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Learn GenerativeAI from Zero to Hero</title>
-  <meta name="author" content="Lam Nguyen" />
-  <!-- Link to your custom CSS -->
-  <link rel="stylesheet" href="theme/pagetoc.css" />
-  <!-- Link to your custom JS -->
-  <script src="theme/pagetoc.js"></script>
+  <!-- mdBook default CSS (adjust path if needed) -->
+  <link rel="stylesheet" href="css/ayu.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <!-- Any additional custom CSS (like pagetoc.css if you’re using it) -->
+  <link rel="stylesheet" href="theme/pagetoc.css">
 </head>
 
 <body>
-  <nav>
-    <!-- Example links to redirect targets (based on your config) -->
-    <ul>
-      <li><a href="01-introduction.html">Chapter 01: Introduction</a></li>
-      <li><a href="02-Fundamental.html">Chapter 02: Fundamental</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <h1>Learn GenerativeAI from Zero to Hero</h1>
-    <p><strong>Author:</strong> Lam Nguyen</p>
-
-    <p>
-      <!-- Example link to your GitHub repository -->
-      <a href="https://github.com/lamnd09/genai-book" target="_blank" rel="noopener noreferrer">
-        <i class="fa fa-github"></i> GitHub Repository
+  <!-- mdBook typically wraps the nav/content in a <div> with an ID -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="nav-brand">
+        Learn GenerativeAI from Zero to Hero
       </a>
-    </p>
+    </div>
+    <!-- A placeholder for a navigation tree or table of contents -->
+    <nav class="nav">
+      <ul>
+        <li><a href="01-introduction.html">Chapter 01: Introduction</a></li>
+        <li><a href="02-Fundamental.html">Chapter 02: Fundamental</a></li>
+      </ul>
+    </nav>
+  </div>
 
-    <p>
-      Welcome to the home page for <em>Learn GenerativeAI from Zero to Hero</em>. 
-      Use the navigation links above to explore the chapters.
-    </p>
-  </main>
+  <div class="main">
+    <div class="page-title">
+      <h1>Learn GenerativeAI from Zero to Hero</h1>
+      <p class="author">by Lam Nguyen</p>
+    </div>
+
+    <div class="page-content">
+      <p>Welcome to the book. This is a custom landing page that looks similar to a standard mdBook-generated site. Use the links on the left sidebar to navigate through chapters.</p>
+      <p>
+        <a href="https://github.com/mlip-cmu/book" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-github"></i> Visit our GitHub Repo
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- mdBook’s built-in scripts (adjust path if needed) -->
+  <script src="js/book.js"></script>
+  <!-- Any custom JS (e.g., pageToc.js) -->
+  <script src="theme/pagetoc.js"></script>
 </body>
 </html>
