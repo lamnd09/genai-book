@@ -1,317 +1,257 @@
 <!DOCTYPE HTML>
 <html lang="en" class="sidebar-visible no-js light">
-    <head>
-        <!-- Book generated using mdBook -->
-        <meta charset="UTF-8">
-        <title>Learning Genenerative AI from Zero to Hero</title>
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>Cover - [Your Book Title]</title>
 
-        <!-- Custom HTML head -->
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+    <!-- Custom HTML head -->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <!-- Example: custom fonts; remove or replace if desired -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+    <!-- mdBook default CSS files (adjust paths to match your build) -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
 
-        <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
 
-        <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="theme/pagetoc.css">
-    </head>
-    <body>
-    <div id="body-container">
-        <!-- Provide site root to javascript -->
-        <script>
-            var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
-        </script>
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="highlight.css">
+    <link rel="stylesheet" href="tomorrow-night.css">
+    <link rel="stylesheet" href="ayu-highlight.css">
 
-        <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script>
-            try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
+    <!-- Custom theme (optional) -->
+    <link rel="stylesheet" href="theme/pagetoc.css">
+</head>
+<body>
+<div id="body-container">
+    <!-- Provide site root to JavaScript -->
+    <script>
+        var path_to_root = "";
+        // Picks a default theme based on prefers-color-scheme
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+    </script>
 
-                if (theme.startsWith('"') && theme.endsWith('"')) {
-                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
-                }
+    <!-- Work around quoted values in localStorage -->
+    <script>
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
 
-                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
-                }
-            } catch (e) { }
-        </script>
-
-        <!-- Set the theme before any content is loaded, prevents flash -->
-        <script>
-            var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
-            if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
-            html.classList.remove('light')
-            html.classList.add(theme);
-            html.classList.add('js');
-        </script>
-
-        <!-- Hide / unhide sidebar before it is displayed -->
-        <script>
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
-            if (document.body.clientWidth >= 1080) {
-                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
-                sidebar = sidebar || 'visible';
+            if (theme && theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
-        </script>
+            if (sidebar && sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
 
-        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter">
-                  <li class="chapter-item expanded affix ">
+    <!-- Set theme before content loads -->
+    <script>
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+        if (theme === null || theme === undefined) {
+            theme = default_theme;
+        }
+        var html = document.querySelector('html');
+        html.classList.remove('no-js');
+        html.classList.remove('light');
+        html.classList.add(theme);
+        html.classList.add('js');
+    </script>
+
+    <!-- Set sidebar visibility -->
+    <script>
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) {}
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <!-- Sidebar Table of Contents -->
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <div class="sidebar-scrollbox">
+            <!-- Replace the below <ol> with your own chapters or let mdBook generate automatically -->
+            <ol class="chapter">
+                <li class="chapter-item expanded affix">
                     <a href="index.html">Cover</a>
-                  </li>
-                  <li class="chapter-item expanded affix ">
-                    <li class="part-title">Setting the Stage</li>
-                    <li class="chapter-item expanded ">
-                      <a href="01-introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="02-from-models-to-systems.html"><strong aria-hidden="true">2.</strong> From Models to Systems</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="03-machine-learning-for-software-engineers-in-a-nutshell.html"><strong aria-hidden="true">3.</strong> Machine Learning for Software Engineers, in a Nutshell</a>
-                    </li>
-                  </li>
-                  <li class="chapter-item expanded affix ">
-                    <li class="part-title">Requirements Engineering</li>
-                    <li class="chapter-item expanded ">
-                      <a href="04-when-to-use-machine-learning.html"><strong aria-hidden="true">4.</strong> When to use Machine Learning</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="05-setting-and-measuring-goals.html"><strong aria-hidden="true">5.</strong> Setting and Measuring Goals</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="06-gathering-requirements.html"><strong aria-hidden="true">6.</strong> Gathering Requirements</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="07-planning-for-mistakes.html"><strong aria-hidden="true">7.</strong> Planning for Mistakes</a>
-                    </li>
-                  </li>
-                  <li class="chapter-item expanded affix ">
-                    <li class="part-title">Architecture and Design</li>
-                    <li class="chapter-item expanded ">
-                      <a href="08-thinking-like-a-software-architect.html"><strong aria-hidden="true">8.</strong> Thinking like a Software Architect</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="09-quality-attributes-of-ml-components.html"><strong aria-hidden="true">9.</strong> Quality Attributes of ML Components</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="10-deploying-a-model.html"><strong aria-hidden="true">10.</strong> Deploying a Model</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="11-automating-the-pipeline.html"><strong aria-hidden="true">11.</strong> Automating the Pipeline</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="12-scaling-the-system.html"><strong aria-hidden="true">12.</strong> Scaling the System</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="13-planning-for-operations.html"><strong aria-hidden="true">13.</strong> Planning for Operations</a>
-                    </li>
-                  </li>
-                  <li class="chapter-item expanded affix ">
-                    <li class="part-title">Quality Assurance</li>
-                    <li class="chapter-item expanded ">
-                      <a href="14-quality-assurance-basics.html"><strong aria-hidden="true">14.</strong> Quality Assurance Basics</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="15-model-quality.html"><strong aria-hidden="true">15.</strong> Model Quality</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="16-data-quality.html"><strong aria-hidden="true">16.</strong> Data Quality</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="17-pipeline-quality.html"><strong aria-hidden="true">17.</strong> Pipeline Quality</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="18-system-quality.html"><strong aria-hidden="true">18.</strong> System Quality</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="19-testing-and-experimenting-in-production.html"><strong aria-hidden="true">19.</strong> Testing and Experimenting in Production</a>
-                    </li>
-                  </li>
-                  <li class="chapter-item expanded affix ">
-                    <li class="part-title">Process and Teams</li>
-                    <li class="chapter-item expanded ">
-                      <a href="20-data-science-and-software-engineering-process-models.html"><strong aria-hidden="true">20.</strong> Data Science and Software Engineering Process Models</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="21-interdisciplinary-teams.html"><strong aria-hidden="true">21.</strong> Interdisciplinary Teams</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="22-technical-debt.html"><strong aria-hidden="true">22.</strong> Technical Debt</a>
-                    </li>
-                  </li>
-                  <li class="chapter-item expanded affix ">
-                    <li class="part-title">Responsible ML Engineering</li>
-                    <li class="chapter-item expanded ">
-                      <a href="23-responsible-engineering.html"><strong aria-hidden="true">23.</strong> Responsible Engineering</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="24-versioning-provenance-and-reproducibility.html"><strong aria-hidden="true">24.</strong> Versioning, Provenance, and Reproducibility</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="25-explainability.html"><strong aria-hidden="true">25.</strong> Explainability</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="26-fairness.html"><strong aria-hidden="true">26.</strong> Fairness</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="27-safety.html"><strong aria-hidden="true">27.</strong> Safety</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="28-security-and-privacy.html"><strong aria-hidden="true">28.</strong> Security and Privacy</a>
-                    </li>
-                    <li class="chapter-item expanded ">
-                      <a href="29-transparency-and-accountability.html"><strong aria-hidden="true">29.</strong> Transparency and Accountability</a>
-                    </li>
-                  </li>
-                </ol>
-            </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
-        </nav>
+                </li>
 
-        <div id="page-wrapper" class="page-wrapper">
-            <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
-                    <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                            <i class="fa fa-paint-brush"></i>
-                        </button>
-                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                        </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
+                <!-- Example part title & chapters -->
+                <li class="chapter-item expanded affix">
+                    <li class="part-title">Part 1: Getting Started</li>
+                    <li class="chapter-item expanded">
+                        <a href="01-introduction.html">1. Introduction</a>
+                    </li>
+                    <li class="chapter-item expanded">
+                        <a href="02-chapter.html">2. Chapter Title</a>
+                    </li>
+                </li>
+                <!-- Add more as needed -->
+            </ol>
+        </div>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
 
-                    <h1 class="menu-title"></h1>
-
-                    <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
-                        <a href="https://github.com/mlip-cmu/book" title="Git repository" aria-label="Git repository">
-                            <i id="git-repository-button" class="fa fa-github"></i>
-                        </a>
-                    </div>
+    <div id="page-wrapper" class="page-wrapper">
+        <div class="page">
+            <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar" class="menu-bar sticky bordered">
+                <div class="left-buttons">
+                    <!-- Sidebar toggle -->
+                    <button id="sidebar-toggle" class="icon-button" type="button"
+                            title="Toggle Table of Contents"
+                            aria-label="Toggle Table of Contents"
+                            aria-controls="sidebar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <!-- Theme toggle -->
+                    <button id="theme-toggle" class="icon-button" type="button"
+                            title="Change theme"
+                            aria-label="Change theme"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="theme-list">
+                        <i class="fa fa-paint-brush"></i>
+                    </button>
+                    <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                        <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                    </ul>
+                    <!-- Search toggle -->
+                    <button id="search-toggle" class="icon-button" type="button"
+                            title="Search (Shortkey: s)"
+                            aria-label="Toggle Searchbar"
+                            aria-expanded="false"
+                            aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                        <i class="fa fa-search"></i>
+                    </button>
                 </div>
 
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults"></ul>
-                    </div>
-                </div>
+                <h1 class="menu-title"></h1>
 
-                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script>
-                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
-                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-                    });
-                </script>
-
-                <div id="content" class="content">
-                    <main>
-                        <div class="sidetoc">
-                            <nav class="pagetoc"></nav>
-                        </div>
-                        <h1 id="machine-learning-in-production-from-models-to-products">
-                            <a class="header" href="#machine-learning-in-production-from-models-to-products">
-                              Machine Learning in Production: From Models to Products
-                            </a>
-                        </h1>
-
-                        <p>by <a href="https://www.cs.cmu.edu/~ckaestne/">Christian Kästner</a>, Carnegie Mellon University</p>
-                        <blockquote>
-                            <p>What does it take to build software products with machine learning, not just models and demos? We assume that you can train a model or build prompts to make predictions, but what does it take to turn the model into a product and actually deploy it, have confidence in its quality, and successfully operate and maintain it at scale? This book explores designing, building, testing, deploying, and operating software products with machine-learned models. It covers the entire lifecycle from a prototype ML model to an entire system deployed in production. Covers also responsible AI (safety, security, fairness, explainability) and MLOps.</p>
-                        </blockquote>
-                        <p>To be published April 8, 2025 by MIT Press:
-                            <a href="https://mitpress.mit.edu/9780262049726/machine-learning-in-production/">
-                              Official MIT Press Page
-                            </a>.
-                        </p>
-                        <p>The book corresponds to the CMU course
-                            <a href="https://mlip-cmu.github.io/">17-645 Machine Learning in Production</a>
-                            (crosslisted as 11-695 AI Engineering) with publicly available slides and assignments. See also our
-                            <a href="https://github.com/ckaestne/seaibib">annotated bibliography</a> on the topic.
-                        </p>
-                        <p>The book is released under a creative commons license:
-                            <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-                              Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License
-                            </a>.
-                        </p>
-                    </main>
-
-                    <nav class="nav-wrapper" aria-label="Page navigation">
-                        <!-- Mobile navigation buttons -->
-                        <a rel="next" href="01-introduction.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                        <div style="clear: both"></div>
-                    </nav>
+                <div class="right-buttons">
+                    <!-- Print page -->
+                    <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <i id="print-button" class="fa fa-print"></i>
+                    </a>
+                    <!-- Git repository link, update as needed -->
+                    <a href="https://github.com/your-org/your-repo" title="Git repository" aria-label="Git repository">
+                        <i id="git-repository-button" class="fa fa-github"></i>
+                    </a>
                 </div>
             </div>
 
-            <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                <a rel="next" href="01-introduction.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </nav>
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" id="searchbar" name="searchbar"
+                           placeholder="Search this book ..."
+                           aria-controls="searchresults-outer"
+                           aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults"></ul>
+                </div>
+            </div>
+
+            <!-- Apply ARIA attributes after the DOM elements exist -->
+            <script>
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div id="content" class="content">
+                <main>
+                    <!-- The small sidetoc (page-specific) goes here, if needed -->
+                    <div class="sidetoc">
+                        <nav class="pagetoc"></nav>
+                    </div>
+
+                    <!-- Book Title & Intro -->
+                    <h1 id="your-book-title">
+                        <a class="header" href="#your-book-title">[Your Book Title]</a>
+                    </h1>
+                    <p>
+                        by <strong>[Your Name or Author List]</strong>
+                    </p>
+
+                    <blockquote>
+                        <p>
+                            [Optional short blurb or description of your book.  
+                            This can be a paragraph highlighting content, goals, or context.]
+                        </p>
+                    </blockquote>
+
+                    <p>
+                        [Optional: mention publication details, course references, or any disclaimers.  
+                         For example: "Released under [license]." "Used in [course name]."]
+                    </p>
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="next" href="01-introduction.html"
+                       class="mobile-nav-chapters next"
+                       title="Next chapter"
+                       aria-label="Next chapter"
+                       aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
         </div>
 
-        <script>
-            window.playground_copyable = true;
-        </script>
-
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
-
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
-
-        <!-- Custom JS scripts -->
-        <script src="theme/pagetoc.js"></script>
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a rel="next" href="01-introduction.html"
+               class="nav-chapters next"
+               title="Next chapter"
+               aria-label="Next chapter"
+               aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </nav>
     </div>
-    </body>
+
+    <!-- Additional scripts used by mdBook -->
+    <script>
+        window.playground_copyable = true;
+    </script>
+
+    <script src="elasticlunr.min.js"></script>
+    <script src="mark.min.js"></script>
+    <script src="searcher.js"></script>
+
+    <script src="clipboard.min.js"></script>
+    <script src="highlight.js"></script>
+    <script src="book.js"></script>
+
+    <!-- Custom JS scripts (e.g., Table of Contents, etc.) -->
+    <script src="theme/pagetoc.js"></script>
+</div>
+</body>
 </html>
